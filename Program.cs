@@ -1,116 +1,88 @@
-﻿double a;
-double b;
-double oper;
-double ans;
-do
+﻿using System.Reflection.PortableExecutable;
+using System.Runtime.CompilerServices;
+
+int[] octave = new int [] { 6541, 6930, 7342, 7778, 8241, 8741, 8731, 9250, 9800, 1038, 1100, 1165, 1235 };
+int[] octave2 = new int [] { 1308, 1386, 1468, 1556, 1648, 1746, 1850, 1960, 2077, 2200, 2331, 2469 };
+int[] currentlyOctave = new int[] { 6541, 6930, 7342, 7778, 8241, 8741, 8731, 9250, 9800, 1038, 1100, 1165, 1235 };
+while (true)
 {
-    Console.WriteLine("Выбирите операцию");
-    Console.WriteLine("1. Сложение 2 чисел");
-    Console.WriteLine("2. Вычетание первого из второго");
-    Console.WriteLine("3. Умножение двух чисел");
-    Console.WriteLine("4. Деление первого числа на второе");
-    Console.WriteLine("5. Возведение в N степень первое число");
-    Console.WriteLine("6. Найти квадратный корень из числа");
-    Console.WriteLine("7. Найти 1 процент от числа ");
-    Console.WriteLine("8. Найти факториал из числа");
-    Console.WriteLine("9.Выйти из программы ");
-    oper = Convert.ToDouble(Console.ReadLine());
-    switch (oper)
-    {
-        case 1:
-            Console.Write("Введите первое  число: ");
-            a = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Введите второе число: ");
-            b = Convert.ToDouble(Console.ReadLine());
-            ans = a + b;
-            Console.WriteLine(" Сумма примера:" + a + " + " + b + "=" + ans +"" );
-            break;
-        case 2:
-            Console.Write("Введите первое  число: ");
-            a = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Введите второе  число: ");
-            b = Convert.ToDouble(Console.ReadLine());
-            ans = a - b;
-            Console.WriteLine(" Разность примера " + a + " - " + b + "=" + ans + "");
-            break;
-        case 3:
-            Console.Write("Введите первое число: ");
-            a = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Введите второе число: ");
-            b = Convert.ToDouble(Console.ReadLine());
-            ans = a * b;
-            Console.WriteLine(" Проиведение примера" + a + " * " + b + "=" + ans + "");
-            break;
-        case 4:
-            Console.Write("Введите первое число: ");
-            a = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Введите второе число: ");
-            b = Convert.ToDouble(Console.ReadLine());
-            ans = a / b;
-            Console.WriteLine(" Частное примера " + a + " / " + b + "=" + ans + "");
-            break;
-        case 5:
-            Console.Write("Введите первое число: ");
-            a = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Введите второе  число: ");
-            b = Convert.ToDouble(Console.ReadLine());        
-            ans = Math.Pow(a, b);
-            Console.WriteLine(" Результат" + a + " ^ " + b + "=" + ans + "");
-            break;
-        case 6:
-            Console.Write("Введите первое число: ");
-            a = Convert.ToDouble(Console.ReadLine());
-            ans = Math.Sqrt(a);
-            Console.WriteLine(" Результат:  " +" √ " + a + "=" + ans + "");
-            break;
-        case 7:
-            Console.Write("Введите первое число: ");
-            a = Convert.ToDouble(Console.ReadLine());
-            ans = a * 0.01;
-            Console.WriteLine(" Процент от цисла " + a +  "=" + ans + "");
-            break;
-        case 8:
-            Console.Write("Введите первое число: ");
-            a = Convert.ToDouble(Console.ReadLine());
-            double k = a;
-            double facl = 1;
-            for (double i = 1; i <= a; i++)
-            {
-                facl = facl * i;
-            }
-            Console.WriteLine("Факториал числа" + a + " равен " + facl + "");
-            break;
-        default:
-            if (oper == 9)
-                continue;
-            else
-                Console.WriteLine(" Операция не проходит! Попробуй другую:");
-            break;
-    }
+    ConsoleKeyInfo KeyReader = Console.ReadKey(true);
 }
-   while( oper !=9 );
+    static void sound(ConsoleKeyInfo keyReader, int[] currentlyOctave)
+    {
+    Console.WriteLine(" A1 , A2 ");
+    switch (keyReader.Key)
+        {
+            case ConsoleKey.A:
+                Console.Beep(currentlyOctave[0], 200);
+                break;
+            case ConsoleKey.D:
+                Console.Beep(currentlyOctave[1], 200);
+                break;
+            case ConsoleKey.W:
+                Console.Beep(currentlyOctave[2], 200);
+                break;
+            case ConsoleKey.S:
+                Console.Beep(currentlyOctave[3], 200);
+                break;
+            case ConsoleKey.F:
+                Console.Beep(currentlyOctave[4], 200);
+                break;
+            case ConsoleKey.E:
+                Console.Beep(currentlyOctave[5],  200);
+                break;
+            case ConsoleKey.G:
+                Console.Beep(currentlyOctave[6], 200);
+                break;
+            case ConsoleKey.J:
+                Console.Beep(currentlyOctave[7], 200);
+                break; 
+            case ConsoleKey.Y:
+                Console.Beep(currentlyOctave[8], 200);
+                break;
+                case ConsoleKey.Escape:
+                Console.WriteLine(" Закончить");
+                   break;
 
-               
-            
-            
+        }
+    }
+{
+
+    ConsoleKeyInfo KeyReader = Console.ReadKey();
+   
+    Console.Clear();
+    if (KeyReader.Key == ConsoleKey.F3 || KeyReader.Key == ConsoleKey.F5)
+
+    {
+        currentlyOctave = ChangeOctave(KeyReader);
+    }
+    else
+    {
+        sound(KeyReader, currentlyOctave);
+    }
+    static int[] ChangeOctave(ConsoleKeyInfo KeyReader)
+    {
+        switch (KeyReader.Key)
+
+        {
+
+            case ConsoleKey.F3:
+
+                int[] octave1 = new int[] { 6541, 6930, 7342, 7778, 8241, 8741, 8731, 9250, 9800, 1038, 1100, 1165, 1235 };
+                return octave1;
+                break;
+
+            case ConsoleKey.F5:
+
+                int[] octave3 = new int[] { 1308, 1386, 1468, 1556, 1648, 1746, 1850, 1960, 2077, 2200, 2331, 2469 };
+                return  octave3;
+                break;
+            default: return new int[]  { 6541, 6930, 7342, 7778, 8241, 8741, 8731, 9250, 9800, 1038, 1100, 1165, 1235 };
+        }
+        }
+    }
 
 
 
-
-
-
-
-
-
-
-    
-    
 
   
-
-
-
-
-   
-
-
