@@ -1,88 +1,56 @@
-﻿using System.Reflection.PortableExecutable;
-using System.Runtime.CompilerServices;
+﻿/*using ConsoleApp6;
+using System.ComponentModel.Design;
 
-int[] octave = new int [] { 6541, 6930, 7342, 7778, 8241, 8741, 8731, 9250, 9800, 1038, 1100, 1165, 1235 };
-int[] octave2 = new int [] { 1308, 1386, 1468, 1556, 1648, 1746, 1850, 1960, 2077, 2200, 2331, 2469 };
-int[] currentlyOctave = new int[] { 6541, 6930, 7342, 7778, 8241, 8741, 8731, 9250, 9800, 1038, 1100, 1165, 1235 };
-while (true)
+DateTime a = DateTime.Now;
+Console.WriteLine(" Дата: " + a );
+Console.WriteLine(" 1. Приготовить завтрак по рецепту из интернета");
+Console.WriteLine(" 2. Съездить в музей с друзьями");
+Console.WriteLine(" 3. Сходить в кафешку");
+Console.WriteLine(" 4. Поехать вместо метро на такси");
+int selected = Boba.Biba();
+Console.Clear();
+
+if ( selected == 1)
 {
-    ConsoleKeyInfo KeyReader = Console.ReadKey(true);
+    Domik den1 = new Domik();
+    den1.Name = "Приготовить завтрак по рецепту из интернета";
+    den1.Description = " Найти рецепт завтрака" ;
+    den1.Date = a;
+    Console.WriteLine("название:" +  den1.Name );
+    Console.WriteLine("описание:" + den1.Description);
+    Console.WriteLine("дата:" + den1.Date);
+    Data.Date();
 }
-    static void sound(ConsoleKeyInfo keyReader, int[] currentlyOctave)
-    {
-    Console.WriteLine(" A1 , A2 ");
-    switch (keyReader.Key)
-        {
-            case ConsoleKey.A:
-                Console.Beep(currentlyOctave[0], 200);
-                break;
-            case ConsoleKey.D:
-                Console.Beep(currentlyOctave[1], 200);
-                break;
-            case ConsoleKey.W:
-                Console.Beep(currentlyOctave[2], 200);
-                break;
-            case ConsoleKey.S:
-                Console.Beep(currentlyOctave[3], 200);
-                break;
-            case ConsoleKey.F:
-                Console.Beep(currentlyOctave[4], 200);
-                break;
-            case ConsoleKey.E:
-                Console.Beep(currentlyOctave[5],  200);
-                break;
-            case ConsoleKey.G:
-                Console.Beep(currentlyOctave[6], 200);
-                break;
-            case ConsoleKey.J:
-                Console.Beep(currentlyOctave[7], 200);
-                break; 
-            case ConsoleKey.Y:
-                Console.Beep(currentlyOctave[8], 200);
-                break;
-                case ConsoleKey.Escape:
-                Console.WriteLine(" Закончить");
-                   break;
-
-        }
-    }
+else if ( selected == 2)
 {
-
-    ConsoleKeyInfo KeyReader = Console.ReadKey();
-   
-    Console.Clear();
-    if (KeyReader.Key == ConsoleKey.F3 || KeyReader.Key == ConsoleKey.F5)
-
-    {
-        currentlyOctave = ChangeOctave(KeyReader);
-    }
-    else
-    {
-        sound(KeyReader, currentlyOctave);
-    }
-    static int[] ChangeOctave(ConsoleKeyInfo KeyReader)
-    {
-        switch (KeyReader.Key)
-
-        {
-
-            case ConsoleKey.F3:
-
-                int[] octave1 = new int[] { 6541, 6930, 7342, 7778, 8241, 8741, 8731, 9250, 9800, 1038, 1100, 1165, 1235 };
-                return octave1;
-                break;
-
-            case ConsoleKey.F5:
-
-                int[] octave3 = new int[] { 1308, 1386, 1468, 1556, 1648, 1746, 1850, 1960, 2077, 2200, 2331, 2469 };
-                return  octave3;
-                break;
-            default: return new int[]  { 6541, 6930, 7342, 7778, 8241, 8741, 8731, 9250, 9800, 1038, 1100, 1165, 1235 };
-        }
-        }
-    }
-
-
-
-
-  
+    Domik den2 = new Domik();
+    den2.Name = "Съездить в музей с друзьями";
+    den2.Description = "Узнать много нового";
+    den2.Date = a;
+    Console.WriteLine("название:" + den2.Name);
+    Console.WriteLine("описание:" + den2.Description);
+    Console.WriteLine("дата:" + den2.Date);
+    Data.Date();
+}
+else if (selected == 3)
+{
+    Domik den3 = new Domik();
+    den3.Name = "Сходить в кафешку";
+    den3.Description = "Вкусно поесть вредной еды";
+    den3.Date = a;
+    Console.WriteLine("название:" + den3.Name);
+    Console.WriteLine("описание:" + den3.Description);
+    Console.WriteLine("дата:" + den3.Date);
+    Data.Date();
+}
+else if (selected == 4)
+{
+    Domik den4 = new Domik();
+    den4.Name = "Поехать вместо метро на такси";
+    den4.Description = "Потратить чуть болше денег";
+    den4.Date = a;
+    Console.WriteLine("название:" + den4.Name);
+    Console.WriteLine("описание:" + den4.Description);
+    Console.WriteLine("дата:" + den4.Date);
+    Data.Date();
+}*/
