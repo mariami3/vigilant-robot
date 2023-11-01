@@ -1,55 +1,55 @@
-﻿using ConsoleApp6;
+﻿using System.Runtime.InteropServices;
+using СП5;
 
-var a = DateTime.Now;
-Console.WriteLine(" Дата: " + a );
-Console.WriteLine(" 1. Приготовить завтрак по рецепту из интернета");
-Console.WriteLine(" 2. Съездить в музей с друзьями");
-Console.WriteLine(" 3. Сходить в кафешку");
-Console.WriteLine(" 4. Поехать вместо метро на такси");
-int selected =  Boooba.Biba();
-Console.Clear();
+Tortik Napoleon = new Tortik();
+Napoleon.Name = "Наполеон";
+Napoleon.Forma = "Квадратный";
+Napoleon.Razmer = "Средний";
+Napoleon.Vkys = "Сливочный";
+Napoleon.Glazyr = "Заварной крем";
+Napoleon.Dekor = "Песочная посыпка";
+Napoleon.Kolichestvo = 5;
+Napoleon.Price = 300;
 
-if ( selected == 1)
+Tortik Tiramisu = new Tortik();
+Tiramisu.Name = "Тирамису";
+Tiramisu.Forma = "Круглый";
+Tiramisu.Razmer = "Маленький";
+Tiramisu.Vkys = "Шоколдный";
+Tiramisu.Glazyr = "Отсутствует";
+Tiramisu.Dekor = "Посыпка из какао";
+Tiramisu.Kolichestvo = 3;
+Tiramisu.Price = 400;
+
+Tortik PTM = new Tortik();
+PTM.Name = "Птичье молоко";
+PTM.Forma = "Круглый";
+PTM.Razmer = "Маленький";
+PTM.Vkys = "Ванильное суфле";
+PTM.Glazyr = "Шоколад";
+PTM.Dekor = "Карем";
+PTM.Kolichestvo = 6;
+PTM.Price = 350;
+
+Tortik Muraveynik = new Tortik();
+Muraveynik.Name = "Муравейник";
+Muraveynik.Forma = "Прямоугольный";
+Muraveynik.Razmer = "Большой";
+Muraveynik.Vkys = "Сгущенки";
+Muraveynik.Glazyr = "Отсутствует";
+Muraveynik.Dekor = "Посыпка из печенья";
+Muraveynik.Kolichestvo = 4;
+Muraveynik.Price = 250;
+
+var menu = new List<Tortik>();
+menu.Add(PTM);
+menu.Add(Muraveynik);
+menu.Add(Napoleon);
+menu.Add(Tiramisu);
+
+DateTime d = DateTime.Now;
+Console.WriteLine("Текщая дата: " +  d.Date);
+for (int i = 0; i < menu.Count; i++)
 {
-    Dom den1 = new Dom();
-    den1.Name = "Приготовить завтрак по рецепту из интернета";
-    den1.Description = " Найти рецепт завтрака" ;
-    den1.Date = a;
-    Console.WriteLine("название:" +  den1.Name );
-    Console.WriteLine("описание:" + den1.Description);
-    Console.WriteLine("дата:" + den1.Date);
-    //DateTime.Date();
-}
-else if ( selected == 2)
-{
-    Dom den2 = new Dom();
-    den2.Name = "Съездить в музей с друзьями";
-    den2.Description = "Узнать много нового";
-    den2.Date = a;
-    Console.WriteLine("название:" + den2.Name);
-    Console.WriteLine("описание:" + den2.Description);
-    Console.WriteLine("дата:" + den2.Date);
-    //DateTime.Date();
-}
-else if (selected == 3)
-{
-    Dom den3 = new Dom();
-    den3.Name = "Сходить в кафешку";
-    den3.Description = "Вкусно поесть вредной еды";
-    den3.Date = a;
-    Console.WriteLine("название:" + den3.Name);
-    Console.WriteLine("описание:" + den3.Description);
-    Console.WriteLine("дата:" + den3.Date);
-    //DateTime.Date();
-}
-else if (selected == 4)
-{
-    Dom den4 = new Dom();
-    den4.Name = "Поехать вместо метро на такси";
-    den4.Description = "Потратить чуть болше денег";
-    den4.Date = a;
-    Console.WriteLine("название:" + den4.Name);
-    Console.WriteLine("описание:" + den4.Description);
-    Console.WriteLine("дата:" + den4.Date);
-    //DateTime.Date();
+    Console.WriteLine(" " + (i + 1) + " " + (menu[i].Name));
 }
