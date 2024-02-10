@@ -1,0 +1,120 @@
+.LeftText{
+position: absolute;
+width: 754.77px;
+height: 323px;
+left: 190px;
+top: 308px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 65.8789px;
+line-height: 99px;
+
+color: #00B594;
+
+}
+
+.ShopProducts{
+  /* Shop Products */
+width: 163.67px;
+height: 33.52px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 22.4637px;
+line-height: 34px;
+/* identical to box height */
+color: #FFFFFF;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+ .Explore{
+width: 81px;
+height: 34px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 22.4637px;
+line-height: 34px;
+/* identical to box height */
+color: #000000;
+flex: none;
+order: 0;
+flex-grow: 0;
+ }
+
+ .Home{
+width: 74.29px;
+height: 36.76px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24.5085px;
+line-height: 37px;
+/* identical to box height */
+color: #FFFFFF;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+ }
+
+ .IndoorPlants{
+
+width: 162.37px;
+height: 36.76px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24.5085px;
+line-height: 37px;
+/* identical to box height */
+color: #7BFFDF;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+ }
+
+ .OurdoorPlants{
+width: 184.58px;
+height: 36.76px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24.5085px;
+line-height: 37px;
+/* identical to box height */
+color: #7BFFDF;
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+ }
+
+ .Plantify{
+  
+position: absolute;
+left: 27.43%;
+right: 3.48%;
+top: -7.46%;
+bottom: -4.78%;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 38.3991px;
+line-height: 58px;
+/* identical to box height */
+color: #009378;
+ }
+
+
+
