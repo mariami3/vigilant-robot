@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Pop";
+    font-display: swap;
+    src: url("Materials/Poppins-Black.ttf") format("woff");
+}
+
+body{
+    margin: 0%;
+}
+  
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0%;
+}
+
+.photo{
+    width: 800px;
+    height: 1000px; 
+    margin-left: 58%;
+    position: absolute;
+}
+
+.text{
+    font-family: "Pop", serif;
+    font-size: 350%;
+    color: #00B594;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 200px;
+}
+
+.logo{
+    margin-left: 200px;
+    margin-top: 70px;
+    position: absolute;
+}
+
+.grey-button{
+    margin-top: 700px;
+    margin-left: 450px;
+    position: absolute;
+}
+
+.green-button{
+    margin-top: 700px;
+    margin-left: 200px;
+    position: absolute;
+}
