@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ComicsShopModelContainer" CdmEntityContainer="ComicsShopEntities">
+    <EntitySetMapping Name="Comicses">
+      <EntityTypeMapping TypeName="ComicsShopModel.Comicses">
+        <MappingFragment StoreEntitySet="Comicses">
+          <ScalarProperty Name="ID_Comicses" ColumnName="ID_Comicses" />
+          <ScalarProperty Name="Comics_Name" ColumnName="Comics_Name" />
+          <ScalarProperty Name="Athor" ColumnName="Athor" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Delevery">
+      <EntityTypeMapping TypeName="ComicsShopModel.Delevery">
+        <MappingFragment StoreEntitySet="Delevery">
+          <ScalarProperty Name="ID_Delevery" ColumnName="ID_Delevery" />
+          <ScalarProperty Name="Genres_ID" ColumnName="Genres_ID" />
+          <ScalarProperty Name="Comicses_ID" ColumnName="Comicses_ID" />
+          <ScalarProperty Name="DateZakaza" ColumnName="DateZakaza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genres">
+      <EntityTypeMapping TypeName="ComicsShopModel.Genres">
+        <MappingFragment StoreEntitySet="Genres">
+          <ScalarProperty Name="ID_Genres" ColumnName="ID_Genres" />
+          <ScalarProperty Name="GenresName" ColumnName="GenresName" />
+          <ScalarProperty Name="Contry" ColumnName="Contry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

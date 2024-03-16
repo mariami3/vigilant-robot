@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище ComicsShopModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Comicses">
+    <Key>
+      <PropertyRef Name="ID_Comicses" />
+    </Key>
+    <Property Name="ID_Comicses" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Comics_Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Athor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Delevery">
+    <Key>
+      <PropertyRef Name="ID_Delevery" />
+    </Key>
+    <Property Name="ID_Delevery" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Genres_ID" Type="int" Nullable="false" />
+    <Property Name="Comicses_ID" Type="int" Nullable="false" />
+    <Property Name="DateZakaza" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Genres">
+    <Key>
+      <PropertyRef Name="ID_Genres" />
+    </Key>
+    <Property Name="ID_Genres" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GenresName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contry" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Delevery__Comics__571DF1D5">
+    <End Role="Comicses" Type="Self.Comicses" Multiplicity="1" />
+    <End Role="Delevery" Type="Self.Delevery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comicses">
+        <PropertyRef Name="ID_Comicses" />
+      </Principal>
+      <Dependent Role="Delevery">
+        <PropertyRef Name="Comicses_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Delevery__Genres__5629CD9C">
+    <End Role="Genres" Type="Self.Genres" Multiplicity="1" />
+    <End Role="Delevery" Type="Self.Delevery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genres">
+        <PropertyRef Name="ID_Genres" />
+      </Principal>
+      <Dependent Role="Delevery">
+        <PropertyRef Name="Genres_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ComicsShopModelContainer">
+    <EntitySet Name="Comicses" EntityType="Self.Comicses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Delevery" EntityType="Self.Delevery" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Genres" EntityType="Self.Genres" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Delevery__Comics__571DF1D5" Association="Self.FK__Delevery__Comics__571DF1D5">
+      <End Role="Comicses" EntitySet="Comicses" />
+      <End Role="Delevery" EntitySet="Delevery" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Delevery__Genres__5629CD9C" Association="Self.FK__Delevery__Genres__5629CD9C">
+      <End Role="Genres" EntitySet="Genres" />
+      <End Role="Delevery" EntitySet="Delevery" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
