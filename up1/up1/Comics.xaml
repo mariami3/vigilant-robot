@@ -1,0 +1,25 @@
+﻿<Window x:Class="up1.Comics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:up1"
+        mc:Ignorable="d"
+        Title="Comics" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="ComicsDataGrid" AutoGenerateColumns="False" ItemsSource ="{Binding a}" 
+                  SelectedItem ="{Binding selectedItem}">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn  Header="Номер" Binding="{Binding comic_id}"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding title}"/>
+                <DataGridTextColumn Header="Номер автора" Binding="{Binding author_id}"/>
+                <DataGridTextColumn Header="Номер жанра" Binding="{Binding genre_id}"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding price}"/>
+                <DataGridTextColumn Header="Дата выпуска" Binding="{Binding release_date}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

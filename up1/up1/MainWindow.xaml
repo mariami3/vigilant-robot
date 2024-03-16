@@ -1,0 +1,22 @@
+﻿<Window x:Class="up1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:up1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFFBFCFC" Offset="0"/>
+                <GradientStop Color="#FF5A919A" Offset="0.868"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Content="Авторы" HorizontalAlignment="Center" Margin="0,149,0,0" VerticalAlignment="Top" Height="44" Width="144" Click="AuthorsButton_Click" Background="{x:Null}" BorderBrush="#FF151615" Foreground="#FF0B0B0B"></Button>
+        <Button Content="Комиксы" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Height="44" Width="144" Click="ComicsButton_Click" Background="{x:Null}" BorderBrush="#FF181918" Foreground="#FF201F1F"></Button>
+        <Button Content="Жанр" HorizontalAlignment="Center" Margin="0,292,0,0" VerticalAlignment="Top" Height="44" Width="144" Click="GenresButton_Click" Background="{x:Null}" BorderBrush="#FF191A1A" Foreground="#FF0F0F0F"></Button>
+
+    </Grid>
+
+</Window>
