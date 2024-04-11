@@ -1,0 +1,8 @@
+﻿<Page x:Class="p4.NoTestPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="No Test Page">
+    <Grid>
+        <TextBlock>No Test Available</TextBlock>
+    </Grid>
+</Page>

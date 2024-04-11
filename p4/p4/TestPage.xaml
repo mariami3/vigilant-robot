@@ -1,0 +1,13 @@
+﻿<Page x:Class="p4.TestPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Test Page">
+    <Grid>
+        <TextBlock Name="QuestionTextBlock"/>
+        <RadioButton Name="Option1RadioButton"/>
+        <RadioButton Name="Option2RadioButton"/>
+        <RadioButton Name="Option3RadioButton"/>
+        <Button Content="Next" Click="NextButton_Click"/>
+    </Grid>
+</Page>
+

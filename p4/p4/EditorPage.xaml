@@ -1,0 +1,11 @@
+﻿<Page x:Class="p4.EditorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Editor Page">
+    <Grid>
+        <DataGrid Name="TestGrid"/>
+        <Button Content="Add Test" Click="AddTestButton_Click"/>
+        <Button Content="Save" Click="SaveButton_Click"/>
+    </Grid>
+</Page>
+
